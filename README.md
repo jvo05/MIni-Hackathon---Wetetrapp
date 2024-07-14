@@ -1,14 +1,12 @@
-# Mein Projekt
+# Wetterapp
 
-Dies ist ein Beispielprojekt, das ich für GitHub erstellt habe, um verschiedene Markdown-Elemente zu demonstrieren.
+Dies ist eine kleine Wetterapp zur ersten Challenge des Minihackathons von Kevin Chromik
 
 ## Screenshots
 
-Hier sind einige Screenshots, die das Projekt zeigen:
+![Screenshot der Startseite](https://print-screen.dev/content/630e28e56f69a/chrome_SLw6e31MD9.png)
 
-![Screenshot der Startseite]([https://example.com/screenshot1.png](https://print-screen.dev/content/630e28e56f69a/chrome_SLw6e31MD9.png))
-
-![Screenshot der Wetteranzeige]([https://example.com/screenshot2.png](https://print-screen.dev/content/630e28e56f69a/chrome_j2uNbqDZkq.png))
+![Screenshot der Wetteranzeige](https://print-screen.dev/content/630e28e56f69a/chrome_j2uNbqDZkq.png)
 
 ## Installation
 
