@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wettervorhersage</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: beige;
+        }
+
+        .weather-card {
+            background-color: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .weather-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .weather-card table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .weather-card th,
+        .weather-card td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .weather-card th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="text-center mb-4">
+                    <h1>Wettervorhersage für {{ city }}</h1>
+                    <p>Latitude: {{ latitude }}, Longitude: {{ longitude }}</p>
+                </div>
+                <div class="weather-card">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Zeit</th>
+                                <th>Temperatur (°C)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for index in range(hourly.time|length) %}
+                            <tr>
+                                <td>{{ hourly.time[index][11:16] }}</td>
+                                <td>{{ hourly.temperature_2m[index] }} °C</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+body {
+    background-color: beige;
+}
+
+.rounded-search {
+    border-radius: 50px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.rounded-search-input {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    font-size: 1.5rem;
+}
+
+.rounded-search-button {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.btn-outline-secondary {
+    font-size: 1rem;
+    width: 80%;
+}
+
+.weather-frog {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: -200px;
+}
+
+.centered-frog {
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

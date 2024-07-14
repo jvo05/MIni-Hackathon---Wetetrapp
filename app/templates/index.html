@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wetterapp</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center align-items-center min-vh-100 flex-column">
+        <div class="weather-frog mb-4">
+            <img src="{{ url_for('static', filename='img/frog.png') }}" alt="Wetterfrosch" class="centered-frog">
+        </div>
+        <div class="text-center">
+            <form method="GET" action="/weather" class="form-inline justify-content-center">
+                <div class="input-group input-group-lg rounded-search">
+                    <input type="text" class="form-control rounded-search-input" name="city" placeholder="Suche...">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary rounded-search-button" type="submit">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <button class="btn btn-outline-secondary mt-3" onclick="getLocation()">Eigenen Standort erfassen</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                alert("Geolocation wird von diesem Browser nicht unterstützt.");
+            }
+        }
+
+        function showPosition(position) {
+            console.log("/weather?lat=" + position.coords.latitude + "?lon=" + position.coords.longitude);
+            window.location.href = "/weather?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude;
+        }
+    </script>
+</body>
+
+</html>
