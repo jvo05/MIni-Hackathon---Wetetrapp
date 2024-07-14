@@ -10,7 +10,7 @@ Dies ist eine kleine Wetterapp zur ersten Challenge des Minihackathons von Kevin
 
 ## Installation
 
-Um das Projekt lokal auszuführen, folgen Sie diesen Schritten:
+Um das Projekt lokal auszuführen, folge diesen Schritten:
 
 1. Klone das Repository: `git clone https://github.com/jvo05/Mini-Hackathon---Wetterapp.git`
 2. Wechsel in das Projektverzeichnis
@@ -18,7 +18,7 @@ Um das Projekt lokal auszuführen, folgen Sie diesen Schritten:
 
 ## Verwendung
 
-Nach der Installation können Sie das Projekt wie folgt verwenden:
+Nach der Installation kannst du das Projekt wie folgt verwenden:
 
 ```bash
 python app.py
