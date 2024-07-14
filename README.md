@@ -12,9 +12,9 @@ Dies ist eine kleine Wetterapp zur ersten Challenge des Minihackathons von Kevin
 
 Um das Projekt lokal auszuführen, folgen Sie diesen Schritten:
 
-1. Klonen Sie das Repository: `git clone https://github.com/jvo05/MIni-Hackathon---Wetetrapp.git`
-2. Wechseln Sie in das Projektverzeichnis
-3. Installieren Sie die Abhängigkeiten: `pip install -r requirements.txt`
+1. Klone das Repository: `git clone https://github.com/jvo05/MIni-Hackathon---Wetetrapp.git`
+2. Wechsel in das Projektverzeichnis
+3. Installiere die Abhängigkeiten: `pip install -r requirements.txt`
 
 ## Verwendung
 
@@ -22,3 +22,5 @@ Nach der Installation können Sie das Projekt wie folgt verwenden:
 
 ```bash
 python app.py
+```
+Nun kann die App unter http://127.0.0.1:5000/ aufgerufen werden.
