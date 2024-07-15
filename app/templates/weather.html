@@ -46,23 +46,28 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="text-center mb-4">
+                <div class="text-center mb-4" style="margin-top: 25px;">
                     <h1>Wettervorhersage für {{ city }}</h1>
                     <p>Latitude: {{ latitude }}, Longitude: {{ longitude }}</p>
                 </div>
                 <div class="weather-card">
+                    <p>Datum: <b>{{ date }}</b></p>
                     <table>
                         <thead>
                             <tr>
                                 <th>Zeit</th>
-                                <th>Temperatur (°C)</th>
+                                <th>Temperature (°C)</th>
+                                <th>Regenwahrscheinlichkeit</th>
+                                <th>Cloud cover</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {% for index in range(hourly.time|length) %}
+                            {% for index in range(25) %}
                             <tr>
                                 <td>{{ hourly.time[index][11:16] }}</td>
                                 <td>{{ hourly.temperature_2m[index] }} °C</td>
+                                <td>{{ hourly.precipitation_probability[index] }}%</td>
+                                <td>{{ hourly.cloud_cover[index] }}%</td>
                             </tr>
                             {% endfor %}
                         </tbody>

@@ -3,7 +3,7 @@ class Weather:
         self.params = {
             "latitude": lat,
             "longitude": lon,
-            "hourly": "temperature_2m",
+            "hourly": ["temperature_2m", "precipitation_probability", "cloud_cover"],
         }
 
     def get_weather(self) -> dict:

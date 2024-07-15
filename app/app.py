@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from datetime import datetime
 from util import get_weather
 from util import get_coords
 
@@ -24,8 +25,8 @@ def weather():
         Weather = get_weather.Weather(lat, lon)
         weather_data = Weather.get_weather().json()
         city = ""
-    return render_template("weather.html", **weather_data, city=city)
+    return render_template("weather.html", **weather_data, city=city, date=datetime.now().strftime('%d.%m.%Y'))
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
